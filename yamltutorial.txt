@@ -1,0 +1,21 @@
+#YAML -->Another markup language and similer like json file
+myapp:
+  service: myOOPS
+  test: script1
+  test2: script2
+  myarray: [1 ,2 ,3 ,4 ,5] #array of object
+  myarray1:
+    - 1
+    - 2
+    - 3
+  myarray2:
+    - key1 : value1
+      keyrand: valuerandom    #no dash as it is like [{key1: value1} , {keyrand: valuerandom}]
+
+  service: |
+    this is a
+    multi line string 
+    to print multiline use '|' 
+    symbol for that
+
+# to check validate yamllint .com or codebeautify.org
