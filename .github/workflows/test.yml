@@ -12,6 +12,9 @@ jobs:  #there can be multiple jobs
       # for node you can use actions/setup-node@v2 for node env
 
       - run: python OOPS/hello.py
+      # insted of the operation run we can define here below
+      - name: check the version of python
+        run : python --version
       
       - run: echo 'RUN successful'
 
