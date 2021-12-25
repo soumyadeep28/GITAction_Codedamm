@@ -1,11 +1,9 @@
 name : My first Github action
 on: [push] #when this need to be run the script  push , pull_request , deployment_status , 
 jobs:  #there can be multiple jobs
-  build-apps:   #project name
+  print-hello-world:   #project name
     runs-on: ubuntu-latest      #run version
     steps:                      #steps to run the file
-      - uses : actions/checkout@v2  #this is clone the currently running directory
-      - run : ls
-      - run : tree
-      
+      - run : echo "hello world !!!!!!!!!!!"
+      - run : echo 'this is step 2 '
   
