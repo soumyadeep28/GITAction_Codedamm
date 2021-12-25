@@ -1,8 +1,10 @@
 name : My first Github action
 on: [push] #when this need to be run the script  push , pull_request , deployment_status , 
 jobs:  #there can be multiple jobs
-  build-apps:   #project name
+  buildApps:   #project name
     runs-on: ubuntu-latest      #run version
+    outputs:
+      test: ${{ steps.finished.outputs.text}}
     steps:                      #steps to run the file
       - uses : actions/checkout@v2  #this is clone the currently running directory
       - uses : actions/setup-python@v2
@@ -15,14 +17,19 @@ jobs:  #there can be multiple jobs
       # insted of the operation run we can define here below
       - name: check the version of python
         run : python --version
-      
+      - name: setup finished
+        id: finished
+        run : echo "::set-output name=text::hello-world-from-build-job"
       - run: echo 'RUN successful'
 
 
   dependent-jobs:
-    needs: build-apps #dependent job and wait for buildapp
+    needs: buildApps #dependent job and wait for buildapp
+    env : 
+      MYJOB_OUTPUT: ${{ needs.buildApps.outputs.text}}
     runs-on: ubuntu-latest      #run version
     steps:                      #steps to run the file
+      - run : echo MYJOB_OUTPUT
       - run: echo 'RUN successful'
 
   

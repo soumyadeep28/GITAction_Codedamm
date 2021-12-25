@@ -19,6 +19,11 @@
 9 check test.txt and other files for more clarity
 in script use ${{ secrects.SECRETTOKEN}} in the yml file
 
+10 need key word is needed to create the dependent jobs so after 1st job is done then the 2nd job will be run
+
+
+- 
+
 
 GIT hub identify the secrect ids like token and all so
 GITHUB-> settings --> secrects --> use name and value use that as a varible in the project 
