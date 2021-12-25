@@ -2,7 +2,7 @@ name : My first Github action
 on: [push] #when this need to be run the script  push , pull_request , deployment_status , 
 jobs:  #there can be multiple jobs
   print-hello-world:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps: 
       - run : echo "hello world !!!!!!!!!!!"
       - run : echo 'this is step 2 '
