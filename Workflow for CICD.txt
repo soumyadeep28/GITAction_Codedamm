@@ -1,0 +1,25 @@
+----------------------STEP for gitwork flow for automatic CICD pipeline ------------------
+1. Open GITHUB --> Git Settings --> git Developper settings --> then create authentication token --> then Create a backup of the token and the expiry date of the Token
+ 
+2. Create repository in GITHUB
+3. Create .gitignore file
+4. Crete ssh settings (NOT RECOOMENDED  USE AUTH KEY)
+	i. crete a public key  --> goto .ssh file and then 
+		--> ssh-keygen -t rsa -b 4096 -C 'myemailid_gmail'  --> 4096Byte key size
+		-->got to github.com -->profile --> SSH and GPG Keys --> new ssh keys -->copy id_rsa.pub file to there 
+		
+5. Now you can do git init git commmit push all the stuff
+6. for git create new endpoint to push 'Origin' then urlformwould be like 
+	[ git remote add origin http://{TOKENKEY}url ]
+
+7. create .github folder and create workflows inside the folder -- where .yml file will be there and the based on that all the action will be taken care
+  		**WARNING for token you may have to add the workflows where tocken defination  will be there . else pushing to repoi will create a problem
+
+8. 
+
+
+
+----------------- SOME USEFUL commands--------------------------------------
+1. remove the link from the origin 
+
+git remote remove origin 
