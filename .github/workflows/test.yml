@@ -13,6 +13,6 @@ jobs:  #there can be multiple jobs
 
       - run: python OOPS/hello.py
       
-      - run echo 'RUN successful'
+      - run: echo 'RUN successful'
 
   
