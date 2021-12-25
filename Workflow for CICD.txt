@@ -15,7 +15,7 @@
 7. create .github folder and create workflows inside the folder -- where .yml file will be there and the based on that all the action will be taken care
   		**WARNING for token you may have to add the workflows where tocken defination  will be there . else pushing to repoi will create a problem
 
-8. 
+8. after pushing the file in the origin then in the origin as per WORKFLOWS folder you can check and go to github.dom/repo then go to action tab and you will see the action will be listed in that
 
 
 
