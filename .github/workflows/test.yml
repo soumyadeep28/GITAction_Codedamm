@@ -29,7 +29,7 @@ jobs:  #there can be multiple jobs
       MYJOB_OUTPUT: ${{ needs.buildApps.outputs.text}}
     runs-on: ubuntu-latest      #run version
     steps:                      #steps to run the file
-      - run : echo MYJOB_OUTPUT
+      - run : echo $MYJOB_OUTPUT
       - run: echo 'RUN successful'
 
   
