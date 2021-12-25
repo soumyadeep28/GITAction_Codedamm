@@ -5,7 +5,14 @@ jobs:  #there can be multiple jobs
     runs-on: ubuntu-latest      #run version
     steps:                      #steps to run the file
       - uses : actions/checkout@v2  #this is clone the currently running directory
-      - run : ls
-      - run : tree
+      - uses : actions/setup-python@v2
+        with:
+          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+      # for node you can use actions/setup-node@v2 for node env
+
+      - run: python OOPS/hello.py
       
+      - run echo 'RUN successful'
+
   
