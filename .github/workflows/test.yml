@@ -18,4 +18,11 @@ jobs:  #there can be multiple jobs
       
       - run: echo 'RUN successful'
 
+
+  dependent-jobs:
+    needs: build-apps #dependent job and wait for buildapp
+    runs-on: ubuntu-latest      #run version
+    steps:                      #steps to run the file
+      - run: echo 'RUN successful'
+
   

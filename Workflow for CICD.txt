@@ -16,6 +16,16 @@
   		**WARNING for token you may have to add the workflows where tocken defination  will be there . else pushing to repoi will create a problem
 
 8. after pushing the file in the origin then in the origin as per WORKFLOWS folder you can check and go to github.dom/repo then go to action tab and you will see the action will be listed in that
+9 check test.txt and other files for more clarity
+in script use ${{ secrects.SECRETTOKEN}} in the yml file
+
+
+GIT hub identify the secrect ids like token and all so
+GITHUB-> settings --> secrects --> use name and value use that as a varible in the project 
+
+
+
+
 
 
 
